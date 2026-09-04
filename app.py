@@ -8,7 +8,7 @@ def index():
     tamil_text=''
     error=''
     if request.method=='POST':
-        telugu_text=request.form.get('telugu_text','').split()
+        telugu_text=request.form.get('telugu_text','').strip()
         if telugu_text:
             try:
                 translator=GoogleTranslator(
